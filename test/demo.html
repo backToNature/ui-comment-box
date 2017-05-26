@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>comment-box组件演示</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            margin: 200px 0 0;
+        }
+        .btn {
+            display: block;
+            width: 100%;
+            text-align: center;
+            padding: 20px 0;
+            /*border-top: 1px solid #ccc;*/
+            /*border-bottom: 1px solid #ccc;*/
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body class="fsdfsdf">
+    <button class="btn" id="basic">基础评论框</button>
+    <button class="btn" id="face">带表情评论框</button>
+    <script src="../dist/ui-comment-box.js"></script>
+    <script>
+        var basic_comment = new CommentBox({
+            onSubmit: function (data) {
+                alert(data);
+            }
+        });
+        document.querySelector('#basic').onclick = function () {
+            basic_comment.show();
+        };
+
+        var face_comment = new CommentBox({
+            onSubmit: function (data) {
+                alert(data);
+            },
+            enableFace: true,
+        });
+        document.querySelector('#face').onclick = function () {
+            face_comment.show();
+        };
+    </script>
+</body>
+</html>
