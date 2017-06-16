@@ -64,3 +64,9 @@ comment.destory(); // 销毁评论框句柄
 ### .destory\(\)
 
 销毁评论框
+
+
+## 待解决问题
+
+* svg需要替换为iconfont以兼容华为手机原生浏览器
+* body-lock需要
